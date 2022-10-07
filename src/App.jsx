@@ -5,6 +5,7 @@ import Pokebola from "./assets/pokebola.png";
 import { Search } from "./components/search";
 import { List } from "./components/list";
 import { Api } from "./service/actions";
+import { Modal } from "./components/modal";
 
 function App() {
   const [pokemonsList, setPokemonsList] = useState([]);
@@ -39,6 +40,8 @@ function App() {
       <Search onChange={(value) => handleSearch(value)} />
 
       <List pokemonsList={filteredPokemonsList} />
+
+      <Modal />
     </Screen>
   );
 }
